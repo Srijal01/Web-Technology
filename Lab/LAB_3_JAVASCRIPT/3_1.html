@@ -1,0 +1,70 @@
+<!--Write a JS code for implementing the dialog box such as alert, confirm and prompt . Also write a JavaScript to multiply two numbers using prompt popup box.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Boxes Example</title>
+    <script>
+        // Alert dialog box
+        function showAlert() {
+            alert("This is an alert dialog box!");
+        }
+
+        // Confirm dialog box
+        function showConfirm() {
+            const userConfirmed = confirm("Do you confirm this action?");
+            if (userConfirmed) 
+            {
+                console.log("User confirmed the action.");
+            } 
+            else 
+            {
+                console.log("User canceled the action.");
+            }
+        }
+
+        // Prompt dialog box
+        function showPrompt() {
+            const userInput = prompt("Please enter your name:");
+            if (userInput !== null) 
+            {
+                console.log("User's name is: " + userInput);
+            } 
+            else 
+            {
+                console.log("User canceled the prompt.");
+            }
+        }
+
+        // Multiply two numbers using prompt
+        function multiplyNumbers() {
+            const num1 = prompt("Enter the first number:");
+            if (num1 !== null) 
+            {
+                const num2 = prompt("Enter the second number:");
+                if (num2 !== null) 
+                {
+                    const product = Number(num1) * Number(num2);
+                    alert("The product of " + num1 + " and " + num2 + " is " + product + ".");
+                } 
+                else 
+                {
+                    alert("Operation canceled.");
+                }
+            } 
+            else 
+            {
+                alert("Operation canceled.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Dialog Boxes Example</h1>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+    <button onclick="multiplyNumbers()">Multiply Numbers</button>
+</body>
+</html>

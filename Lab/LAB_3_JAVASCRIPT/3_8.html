@@ -1,0 +1,64 @@
+<!--Write JQuery for any 5 JQuery events.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Import jQuery -->
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Events Demo</h1>
+
+    <button id="clickButton">Click Me</button>
+    <button id="dblClickButton">Double-Click Me</button>
+
+    <input type="text" id="inputField" placeholder="Type here...">
+
+    <div class="box" id="hoverBox">Hover Over Me</div>
+    <div class="box" id="focusBox">Focus on Input</div>
+
+    <script>
+        // 1. Click Event
+        $('#clickButton').click(function () {
+            alert('Button clicked!');
+        });
+
+        // 2. Double-Click Event
+        $('#dblClickButton').dblclick(function () {
+            alert('Button double-clicked!');
+        });
+
+        // 3. Keyup Event (for Input Field)
+        $('#inputField').keyup(function () {
+            console.log('Typed: ' + $(this).val());
+        });
+
+        // 4. Hover Event
+        $('#hoverBox').hover(
+            function () { // Mouse enter
+                $(this).css('background-color', 'yellow');
+            },
+            function () { // Mouse leave
+                $(this).css('background-color', 'lightblue');
+            }
+        );
+
+        // 5. Focus Event
+        $('#focusBox').click(function () {
+            $('#inputField').focus();
+            alert('Input field focused!');
+        });
+    </script>
+</body>
+</html>

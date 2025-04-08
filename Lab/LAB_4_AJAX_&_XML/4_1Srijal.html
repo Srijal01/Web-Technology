@@ -1,0 +1,98 @@
+<!--Write JavaScript to retrieve the information stored in following XML document in html table using AJAX.
+Class.XML
+<class>
+    <student>
+        <name> Subhash </name>
+        <id> 001 </id>
+        <branch> CSIT </branch>
+        <cgpa> 9.0 </cgpa>
+    </student>
+    <student>
+        <name> Mahesh </name>
+        <id> 003 </id>
+        <branch> BCA </branch>
+        <cgpa> 8.0 </cgpa>
+    </student>
+    <student>
+        <name> Anup </name>
+        <id> 008 </id>
+        <branch> BBM </branch>
+        <cgpa> 7.8 </cgpa>
+    </student>
+</class>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <div id="studentTable">
+        <!-- Table will be inserted here -->
+    </div>
+
+    <script>
+        // Function to load and parse the XML file
+        function loadXMLDoc() {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    parseXML(this);
+                }
+            };
+            xhttp.open("GET", "4_1.XML", true);
+            xhttp.send();
+        }
+
+        // Function to parse the XML and create HTML table
+        function parseXML(xml) {
+            const xmlDoc = xml.responseXML;
+            const students = xmlDoc.getElementsByTagName("student");
+            
+            // Create HTML table
+            let table = "<table><tr><th>Name</th><th>ID</th><th>Branch</th><th>CGPA</th></tr>";
+            
+            // Loop through each student and add to table
+            for (let i = 0; i < students.length; i++) {
+                const name = students[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                const id = students[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+                const branch = students[i].getElementsByTagName("branch")[0].childNodes[0].nodeValue;
+                const cgpa = students[i].getElementsByTagName("cgpa")[0].childNodes[0].nodeValue;
+                
+                table += `<tr>
+                            <td>${name}</td>
+                            <td>${id}</td>
+                            <td>${branch}</td>
+                            <td>${cgpa}</td>
+                          </tr>`;
+            }
+            
+            table += "</table>";
+            document.getElementById("studentTable").innerHTML = table;
+        }
+
+        // Load the XML when the page loads
+        window.onload = loadXMLDoc;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Equity Operators</title>
+</head>
+<body>
+    <label>Enter your age</label>
+    <input type="text" id="ageid">
+    <button onclick="compare()">Check Valid Age</button>
+    <p id="demo"></p>
+    <script>
+        function compare() 
+        {
+            let age = document.getElementById("ageid").value;
+            if (age >= 18) 
+            {
+                document.getElementById("demo").innerText = age + " is a valid age";
+            } 
+            else 
+            {
+                document.getElementById("demo").innerText = age + " is not a valid age";
+            }
+        }
+    </script>
+</body>
+</html>

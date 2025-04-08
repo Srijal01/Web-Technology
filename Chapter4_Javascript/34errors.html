@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Error Types</title>
+</head>
+<body>
+    <h1>JavaScript Error Demonstration</h1>
+    <p id="demo"></p>
+    <script>
+        // RangeError Example
+        let num = 1;
+        try {
+            num.toPrecision(500); // Causes RangeError
+        } catch (err) {
+            document.getElementById("demo").innerHTML += "RangeError: " + err.name + "<br>";
+        }
+        // ReferenceError Example
+        try {
+            let x = 5;
+            x = y + 1; // Causes ReferenceError
+        } catch (err) {
+            document.getElementById("demo").innerHTML += "ReferenceError: " + err.name + "<br>";
+        }
+        // SyntaxError Example
+        try {
+            eval("alert('Hello)"); // Causes SyntaxError
+        } catch (err) {
+            document.getElementById("demo").innerHTML += "SyntaxError: " + err.name + "<br>";
+        }
+        // TypeError Example
+        try {
+            num.toUpperCase(); // Causes TypeError
+        } catch (err) {
+            document.getElementById("demo").innerHTML += "TypeError: " + err.name + "<br>";
+        }
+        // URIError Example
+        try {
+            decodeURI("%%%"); // Causes URIError
+        } catch (err) {
+            document.getElementById("demo").innerHTML += "URIError: " + err.name + "<br>";
+        }
+    </script>
+</body>
+</html>

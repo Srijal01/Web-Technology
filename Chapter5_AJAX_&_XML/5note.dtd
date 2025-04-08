@@ -1,0 +1,8 @@
+<!ELEMENT note (to,from,heading,body,srijal, (hello|Hyy))>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ELEMENT br EMPTY>
+<!ELEMENT hello (#PCDATA)>
+<!ELEMENT hyy (#PCDATA)>

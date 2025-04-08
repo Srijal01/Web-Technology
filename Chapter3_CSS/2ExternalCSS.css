@@ -1,0 +1,20 @@
+p{
+    color: blue;
+}
+#bg{
+    background-color: bisque;
+}
+#text-color{
+    color: rebeccapurple;
+}
+.btn{
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+}
+.btn-primary{
+    background-color: chartreuse;
+    color: aqua;
+    padding: 10px;
+    border: 2px solid red;
+}

@@ -1,0 +1,14 @@
+<!--Best way-->
+<date>
+    <year>2025</year>
+    <month>03</month>
+    <day>20</day>
+    <attendance>Present</attendance>
+</date>
+
+<!--Should not do-->
+<!--
+<date year="2025" month="03" day="20">
+    <attendance>Present</attendance>
+</date>
+-->

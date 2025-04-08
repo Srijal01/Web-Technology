@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sale in Supermarket</title>
+</head>
+<body>
+    <script>
+        const items = [
+            {name: "Biscuit", expiryDate: 8},
+            {name: "Milk", expiryDate: 12},
+            {name: "Juice", expiryDate: 8},
+            {name: "Chocolate", expiryDate: 20}
+        ];
+        document.write("Sale items are as follows:<br>");
+        for (let it in items) {
+            if (items[it].expiryDate !== 8)
+                continue;
+            else
+                document.write((parseInt(it) + 1) + ". " + items[it].name + "<br>");
+        }
+    </script>
+</body>
+</html>

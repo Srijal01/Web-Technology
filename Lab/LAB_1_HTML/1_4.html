@@ -1,0 +1,39 @@
+<!--Write a HTML document that implements meta, audio, video and canvas tag in single document.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A web page demonstrating meta, audio, video, and canvas tags">
+    <title>HTML5 Tags Example</title>
+</head>
+<body>
+    <h1>HTML5 Tags Example</h1>
+    <!-- Meta tag example -->
+    <p>This document demonstrates the use of meta, audio, video, and canvas tags.</p>
+    <!-- Audio tag example -->
+    <h2>Audio Example</h2>
+    <audio controls>
+        <source src="Images/Kutumba Arbajo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <!-- Video tag example -->
+    <h2>Video Example</h2>
+    <video width="320" height="240" controls>
+        <source src="Images/SwyambhuChaitya.MOV" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+    <!-- Canvas tag example -->
+    <h2>Canvas Example</h2>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        Your browser does not support the canvas element.
+    </canvas>
+    <script>
+        // Draw something on the canvas
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        context.fillStyle = '#FF0000';
+        context.fillRect(10, 10, 150, 75);
+    </script>
+</body>
+</html>

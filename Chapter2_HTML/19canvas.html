@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="800" style="border: 1px solid #d3d3d3; background-color:antiquewhite;"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        //----------------------for line
+        ctx.moveTo(0,0);        //initial point position is (0,0)
+        ctx.lineTo(500,700);    //final position point of a line
+        ctx.stroke();           //strokes by drawing from 500 to 700
+        //----------------------for circle
+        ctx.beginPath();
+        ctx.arc(200, 100, 50, 0, 2 * Math.PI);  //(200,100)-center, 50-radius, 0-start angle, 2PI = 360-end angle
+        ctx.stroke();
+        //----------------------for rectangle
+        ctx.fillStyle = 'Red';
+        ctx.beginPath();
+        ctx.fillRect(500, 500, 200, 200);
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>

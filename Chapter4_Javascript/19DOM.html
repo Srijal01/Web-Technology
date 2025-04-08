@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Manipulating HTML elements by using ID</title>
+    </head>
+    <body>
+        <h3>To change the text</h3>
+        <p id="intro">Watch Me</p>
+        <script>
+            var x=document.getElementById("intro");
+            x.innerHTML="I have changed";
+        </script>
+        <h3>To change the image</h3>
+        <img src="Pictures/web1.jpeg" id="image">
+        <script>
+            var x = document.getElementById("image");
+            x.src = "Pictures/web1.jpeg";
+        </script>
+    </body>
+</html>

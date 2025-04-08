@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sale in Supermarket</title>
+</head>
+<body>
+    <script>
+        const items = [
+            {name: "Biscuit", expiryDate: 8},
+            {name: "Milk", expiryDate: 12},
+            {name: "Juice", expiryDate: 11},
+            {name: "Chocolate", expiryDate: 20}
+        ];
+        document.write("Sale items are as follows:<br>");
+        items.forEach((item, index) => 
+        {
+            if (item.expiryDate === 8) 
+            {
+                document.write((index + 1) + ". " + item.name + "<br>");
+            }
+        });
+    </script>
+</body>
+</html>

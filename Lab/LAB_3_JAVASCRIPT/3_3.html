@@ -1,0 +1,57 @@
+<!--Write a JS program implementing the concept of Built-in-objects (Window, String, Number, Boolean, Date, Math, RegExp, Form).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Objects Demo</title>
+</head>
+<body>
+    <h1>JavaScript Built-in Objects Demo</h1>
+    <div>
+        <p>Open your browser's console (F12 or right-click -> Inspect -> Console) to see the outputs.</p>
+    </div>
+
+    <!-- Simple Form -->
+    <form id="myForm">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" placeholder="Your name here">
+        <button type="button" onclick="sayHello()">Submit</button>
+    </form>
+
+    <script>
+        // Using the Window object
+        alert("Hello from the Window object!");
+
+        // Using the String object
+        let message = "Hello!";
+        console.log("String length:", message.length);
+
+        // Using the Number object
+        let number = 100.5;
+        console.log("Rounded number:", Math.round(number));
+
+        // Using the Boolean object
+        let isJavaScriptFun = true;
+        console.log("Is JavaScript fun?", isJavaScriptFun);
+
+        // Using the Date object
+        let today = new Date();
+        console.log("Today's date is:", today);
+
+        // Using the Math object
+        console.log("5 squared is:", Math.pow(5, 2));
+
+        // Using the RegExp object
+        let text = "I love JavaScript!";
+        let pattern = /javascript/i;
+        console.log("Does the text contain 'JavaScript'?", pattern.test(text));
+
+        // Function for the form
+        function sayHello() {
+            let name = document.getElementById("name").value;
+            alert("Hello, " + name + "!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="35cookies.js"></script>
+    </head>
+    <style>
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: large;
+            color: whitesmoke;
+        }
+        #check {
+            background-color: green;
+        }
+        #delete {
+            background-color: red;
+        }
+        #set {
+            background-color: blue;
+        }
+    </style>
+    <body>
+        <h2>Operations on Cookie</h2>
+        <h3>Check the cookies available for particular domain/path</h3>
+        <hr size=3 color="green">
+        <button id="check" onclick="checkCookie()">Check Cookie</button>
+        <h3>Set the cookie if there are'nt any</h3>
+        <hr size=3 color="blue">
+        <button id="set" onclick="cookieSet()">Set Cookie</button>
+        <h3>Delete the cookies from the domain/path</h3>
+        <hr size=3 color="red">
+        <button id="delete" onclick="deleteCookie()">Delete cookie</button>
+    </body>
+</html>

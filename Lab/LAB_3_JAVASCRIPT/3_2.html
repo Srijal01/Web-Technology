@@ -1,0 +1,100 @@
+<!--Write a program to implement the concept of Object oriented approach(class, object, constructors) in JavaScript.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li button {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Person Manager</h1>
+    <div>
+        <input id="name" placeholder="Name" required>
+        <input id="age" type="number" placeholder="Age" required>
+        <button onclick="addPerson()">Add Person</button>
+    </div>
+    <ul id="people"></ul>
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            celebrateBirthday() {
+                this.age++;
+                alert(`${this.name} is now ${this.age} years old!`);
+                renderPeople();
+            }
+            getDetails() {
+                return `${this.name} (${this.age} years)`;
+            }
+        }
+        let people = [];
+        function addPerson() {
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            if (name && age) 
+            {
+                people.push(new Person(name, age));
+                renderPeople();
+                document.getElementById("name").value = "";
+                document.getElementById("age").value = "";
+            } 
+            else 
+            {
+                alert("Please enter both name and age.");
+            }
+        }
+
+        function removePerson(index) {
+            people.splice(index, 1);
+            renderPeople();
+        }
+
+        function renderPeople() {
+            const list = document.getElementById("people");
+            list.innerHTML = people.map((person, index) => `
+                <li>
+                    ${person.getDetails()}
+                    <button onclick="people[${index}].celebrateBirthday()">Celebrate Birthday</button>
+                    <button onclick="removePerson(${index})">Remove</button>
+                </li>
+            `).join("");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Object in Object Example JavaScript</title>
+    </head>
+    <body>
+        <script>
+            /* defining a new constructor function */
+            function Person(name, age, city) {
+                this.name = name;
+                this.age = age;
+                this.city = city;
+            }
+            function Bike(company, model, year, owner) {
+                this.company = company;
+                this.model = model;
+                this.year = year;
+                this.owner = owner;
+            }
+            /* creating the object */
+            let person = new Person("John Wick", 30, "New York");
+            let myBike = new Bike("KTM", "Duke", 2010, person);
+            document.write(myBike.company+"<br/>"+myBike.model+"<br/>"+myBike.year+"<br/>"+myBike.owner.name);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Click event - Hide paragraph on click
+            $("p").click(function() {
+                $(this).hide();
+            });
+            // Double-click event - Hide paragraph on double-click
+            $("p").dblclick(function() {
+                $(this).hide();
+            });
+            // Mouse enter event
+            $("#p1").mouseenter(function() {
+                alert("You entered p1!");
+            });
+            // Mouse leave event
+            $("#p1").mouseleave(function() {
+                alert("Bye! You now leave p1!");
+            });
+            // Mouse down event
+            $("#p1").mousedown(function() {
+                alert("Mouse down over p1!");
+            });
+            // Mouse up event
+            $("#p1").mouseup(function() {
+                alert("Mouse up over p1!");
+            });
+            // Hover event (mouseenter + mouseleave)
+            $("#p1").hover(function() {
+                alert("You entered p1!");
+            }, function() {
+                alert("Bye! You now leave p1!");
+            });
+            // Focus event - Change background color on focus
+            $("input").focus(function() {
+                $(this).css("background-color", "#cccccc");
+            });
+            // Blur event - Restore background color on blur
+            $("input").blur(function() {
+                $(this).css("background-color", "#ffffff");
+            });
+            // The on() method - Attach a click event
+            $("p").on("click", function() {
+                $(this).hide();
+            });
+            // The on() method - Attach multiple events
+            $("p").on({
+                mouseenter: function() {
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function() {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function() {
+                    $(this).css("background-color", "yellow");
+                }
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        p {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid black;
+            margin: 10px 0;
+        }
+        input {
+            display: block;
+            margin-top: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>jQuery Events Example</h2>
+    <p id="p1">This is a paragraph. Click, hover, or enter this area to see events in action.</p>
+    <p>This is another paragraph. Clicking on it will hide it.</p>
+    <input type="text" placeholder="Focus on me">
+</body>
+</html>

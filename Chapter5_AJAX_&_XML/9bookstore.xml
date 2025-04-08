@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="9bookstore.xsd">
+    <book>
+        <title>Introduction to XML</title>
+        <price>289.99</price>
+        <author>John Doe</author>
+        <edition>3</edition>
+        <publication>2020</publication>
+    </book>
+    <book>
+        <title>Advanced XSD</title>
+        <price>499.99</price>
+        <author>Jane Smith</author>
+        <edition>2</edition>
+        <publication>2018</publication>
+    </book>
+</bookstore>  

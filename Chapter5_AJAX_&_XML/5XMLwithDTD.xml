@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "5note.dtd">  <!--linked dtd-->
+<note>
+    <to>&lt;Tove&gt;</to>
+    <from>Jani</from>
+    <heading>Reminder</heading>
+    <body>Don't forget me this weekend</body>
+    <srijal></srijal>   <!--Empty tag are self closed tags-->
+    <hello>&quot;Hello!&quot;</hello>
+</note>

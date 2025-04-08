@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Click the button to return the string value of the regular expression.</p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo"></p>
+        <script>
+            function myFunction() {
+            var patt = new RegExp("Hello World", "g");
+            var res = patt.toString();
+            document.getElementById("demo").innerHTML = res;
+            }
+        </script>
+    </body>
+</html>

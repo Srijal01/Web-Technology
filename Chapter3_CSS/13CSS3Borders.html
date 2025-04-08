@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.dotted {
+            border-style: dotted;
+        }
+        p.dashed {
+            border-style: dashed;
+        }
+        p.solid {
+            border-style: solid;
+        }
+        p.double {
+            border-style: double;
+        }
+        p.groove {
+            border-style: groove;
+        }
+        p.ridge {
+            border-style: ridge;
+        }
+        p.inset {
+            border-style: inset;
+        }
+        p.outset {
+            border-style: outset;
+        }
+        p.none {
+            border-style: none;
+        }
+        p.hidden {
+            border-style: hidden;
+        }
+        p.mix {
+            border-style: dotted dashed solid double;
+        }
+        #id1 {
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 25px;
+            }
+        #id2 {
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 50px 20px;
+            }
+        div.radius{
+            border: 3px solid green;
+            border-radius: 5% 10% 13% 20%;
+        }
+        .btnrad{
+            border: 2px solid red;
+            border-radius: 0% 100% 0% 100%;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btnrad">LogIn</button>
+    <div class="radius">
+        <p class="dotted">This is a paragraph.</p>
+        <p class="dashed">This is a paragraph.</p>
+        <p class="solid">This is a paragraph.</p>
+        <p class="double">This is a paragraph.</p>
+        <p class="groove">This is a paragraph.</p>
+        <p class="ridge">This is a paragraph.</p>
+        <p class="ridge">This is a paragraph.</p>
+        <p class="inset">This is a paragraph.</p>
+        <p class="outset">This is a paragraph.</p>
+        <p class="none">This is a paragraph.</p>
+        <p class="hidden">This is a paragraph.</p>
+        <p class="mix">This is a paragraph.</p>
+    </div>
+    <h2>border-radius: 25px:</h2>
+    <div id="id1">
+        <p>The border-radius property defines the radius of the element's corners.</p>
+    </div>
+    <h2>border-radius: 50px 20px:</h2>
+    <div id="id2">
+        <p>If two values are set; the first one is for the top-left and bottom-right corner, the second one for the top-right and bottom-left corner.</p>
+    </div>
+</body>
+</html>

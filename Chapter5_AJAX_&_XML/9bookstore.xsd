@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- Root element for the bookstore -->
+    <xs:element name="bookstore">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Each bookstore can contain multiple books -->
+                <xs:element name="book" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Title of the book -->
+                            <xs:element name="title" type="xs:string"/>
+                            <!-- Price of the book -->
+                            <xs:element name="price" type="xs:decimal"/>
+                            <!-- Author of the book -->
+                            <xs:element name="author" type="xs:string"/>
+                            <!-- Edition of the book -->
+                            <xs:element name="edition" type="xs:positiveInteger"/>
+                            <!-- Publication year of the book -->
+                            <xs:element name="publication" type="xs:gYear"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

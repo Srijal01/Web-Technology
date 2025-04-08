@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<student xmlns="http://www.a.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.a.com 8student.xsd">
+    <name>Srijal</name>
+    <age>20</age>
+    <dob>2004-05-28</dob>
+    <contact>9808570546</contact>
+</student>

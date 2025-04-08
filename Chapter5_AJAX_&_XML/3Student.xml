@@ -1,0 +1,104 @@
+<database>
+    <table name="Students">
+        <column name="Sno" type="integer" />
+        <column name="Roll" type="integer" />
+        <column name="Name" type="string" />
+        <column name="Contact" type="integer" />
+        <column name="Semester" type="integer" />
+        <column name="Batch" type="integer" />
+        <column name="Program" type="string" />
+        <row>
+            <Sno>1</Sno>
+            <Roll>101</Roll>
+            <Name>Ram</Name>
+            <Contact>9841111111</Contact>
+            <Semester>5</Semester>
+            <Batch>2079</Batch>
+            <Program>CSIT</Program>
+        </row>
+        <row>
+            <Sno>2</Sno>
+            <Roll>102</Roll>
+            <Name>Sham</Name>
+            <Contact>9841111101</Contact>
+            <Semester>5</Semester>
+            <Batch>2079</Batch>
+            <Program>BCA</Program>
+        </row>
+        <row>
+            <Sno>3</Sno>
+            <Roll>103</Roll>
+            <Name>Ham</Name>
+            <Contact>9841112341</Contact>
+            <Semester>5</Semester>
+            <Batch>2079</Batch>
+            <Program>CSIT</Program>
+        </row>
+        <row>
+            <Sno>4</Sno>
+            <Roll>104</Roll>
+            <Name>Kam</Name>
+            <Contact>9841111180</Contact>
+            <Semester>5</Semester>
+            <Batch>2079</Batch>
+            <Program>BBM</Program>
+        </row>
+        <row>
+            <Sno>5</Sno>
+            <Roll>105</Roll>
+            <Name>Dam</Name>
+            <Contact>9841000011</Contact>
+            <Semester>5</Semester>
+            <Batch>2079</Batch>
+            <Program>BCA</Program>
+        </row>
+        <row>
+            <Sno>6</Sno>
+            <Roll>106</Roll>
+            <Name>Pam</Name>
+            <Contact>9849872311</Contact>
+            <Semester>5</Semester>
+            <Batch>2079</Batch>
+            <Program>BCA</Program>
+        </row>
+        <row>
+            <Sno>7</Sno>
+            <Roll>107</Roll>
+            <Name>Kakam</Name>
+            <Contact>9841154361</Contact>
+            <Semester>5</Semester>
+            <Batch>2079</Batch>
+            <Program>BBS</Program>
+        </row>
+        <row>
+            <Sno>8</Sno>
+            <Roll>108</Roll>
+            <Name>Ramam</Name>
+            <Contact>9841908111</Contact>
+            <Semester>4</Semester>
+            <Batch>2080</Batch>
+            <Program>BBA</Program>
+        </row>
+        <row>
+            <Sno>9</Sno>
+            <Roll>109</Roll>
+            <Name>Ramod</Name>
+            <Contact>9841123111</Contact>
+            <Semester>5</Semester>
+            <Batch>2079</Batch>
+            <Program>BBM</Program>
+        </row>
+        <row>
+            <Sno>10</Sno>
+            <Roll>1000</Roll>
+            <Name>Kumar</Name>
+            <Contact>9841011111</Contact>
+            <Semester>3</Semester>
+            <Batch>2081</Batch>
+            <Program>BCA</Program>
+        </row>
+    </table>
+    <Srijal>
+        <dob>My date of birth is <date type="BS">2061</date></dob>
+    </Srijal>
+</database>

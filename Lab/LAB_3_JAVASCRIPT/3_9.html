@@ -1,0 +1,37 @@
+<!--Write JSON to implement JSON.parse() and JSON.stringify() methods-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON.stringify() and JSON.parse() Example</title>
+</head>
+<body>
+    <h1>JSON.stringify() and JSON.parse() Demo</h1>
+
+    <script>
+        // Example JavaScript Object
+        const student = {
+            name: "Srijal",
+            age: 21,
+            isEnrolled: true,
+            courses: ["Web Technology", "Database Systems", "Machine Learning"],
+            address: {
+                city: "Kathmandu",
+                country: "Nepal"
+            }
+        };
+
+        // Convert the JavaScript Object to JSON string (JSON.stringify)
+        const jsonString = JSON.stringify(student);
+        console.log("JSON String:", jsonString);
+
+        // Parse the JSON string back to a JavaScript Object (JSON.parse)
+        const parsedObject = JSON.parse(jsonString);
+        console.log("Parsed Object:", parsedObject);
+
+        // Accessing a property from the parsed object
+        console.log("Student Name:", parsedObject.name);
+    </script>
+</body>
+</html>

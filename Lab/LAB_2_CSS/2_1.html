@@ -1,0 +1,37 @@
+<!--Write supported HTML document for implementing inline, internal and external CSS.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A web page demonstrating inline, internal, and external CSS">
+    <title>CSS Demonstration</title>
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: blue;
+        }
+        .internal-css {
+            color: green;
+        }
+    </style>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="2_1.css">
+</head>
+<body>
+    <h1>CSS Demonstration</h1>
+
+    <!-- Inline CSS -->
+    <p style="color: red;">This paragraph is styled with inline CSS.</p>
+
+    <!-- Internal CSS -->
+    <p class="internal-css">This paragraph is styled with internal CSS.</p>
+
+    <!-- External CSS -->
+    <p class="external-css">This paragraph is styled with external CSS.</p>
+
+</body>
+</html>

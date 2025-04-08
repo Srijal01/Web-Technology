@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with CSS</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    tr:hover{
+        background-color: greenyellow;
+    }
+    tr:nth-child(even){
+        background-color: #f7d4d4;
+    }
+    th{
+        background-color: aquamarine;
+    }
+    td{
+        padding: 10px;
+    }
+    /*Shorthand properties of margin and padding*/
+    p{
+        margin: 10px;   /*all top right left down*/
+        margin: 10px 7px;   /*10px for left-right and 7px for top-bottom*/
+        margin: 10px 7px 6px;   /*10px for top 7px for left-right and 6px for bottom*/
+        margin: 10px 7px 6px 5px;   /*10px for top 7px for right 6px for bottom and 5px for left*/
+                                    /*margin-top:10px;
+                                    margin-right: 7px;
+                                    margin-bottom: 6px;
+                                    margin-left: 5px;*/ 
+    }
+    /*similarly for padding too*/
+</style>
+<body>
+    <p>Hello!</p>
+    <table border="2px">
+        <th>Name</th>
+        <th>Address</th>
+        <th>Salary</th>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>30000</td>
+        </tr>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>60000</td>
+        </tr>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>40000</td>
+        </tr>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>45000</td>
+        </tr>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>80000</td>
+        </tr>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>38000</td>
+        </tr>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>55000</td>
+        </tr>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>65000</td>
+        </tr>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>20000</td>
+        </tr>
+        <tr>
+            <td>Srijal Dangol</td>
+            <td>Thecho</td>
+            <td>100000</td>
+        </tr>
+    </table>
+</body>
+<script>
+    var sal = document.querySelectorAll("table tr td:nth-child(3)")
+    for (i=0;i<sal.length;i++)
+    {
+        if(sal[i].innerText>50000)
+        {
+            sal[i].style.background = "green"
+            sal[i].style.color = "red"
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE NEWSPAOER SYSTEM "7newspaper.dtd">
+<NEWSPAPER>
+    <ARTICLE AUTHOR="Jane Doe">
+        <HEADLINE>Breaking News: Tech Innovations</HEADLINE>
+        <BYLINE>By Jane Doe</BYLINE>
+        <LEAD>Technology is evolving at a rapid pace...</LEAD>
+        <BODY>
+            The advancements in artificial intelligence, robotics, and sustainable energy continue to transform industries and improve lives.
+        </BODY>
+        <NOTES>Draft version: For review only.</NOTES>
+    </ARTICLE>
+    <ARTICLE AUTHOR="John Smith">
+        <HEADLINE>Sports Update: Local Team Wins Championship</HEADLINE>
+        <BYLINE>By John Smith</BYLINE>
+        <LEAD>In an intense final match...</LEAD>
+        <BODY>
+            The local team clinched the championship in a thrilling game, securing their place in history.
+        </BODY>
+        <NOTES>Published on March 20, 2025.</NOTES>
+    </ARTICLE>
+</NEWSPAPER>

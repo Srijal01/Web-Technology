@@ -1,0 +1,53 @@
+<!--Write JS code to change the Background image of a body tag by clicking the button.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-image: url('Images/Image_4.jpg'); /* Default background image */
+        }
+        #changeBgButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button id="changeBgButton">Change Background</button>
+
+    <script>
+        // JavaScript to change the background image
+        const button = document.getElementById("changeBgButton");
+        
+        // Array of background image URLs
+        const bgImages = [
+        "Images/Image_1.jpg",
+        "Images/Image_2.jpg",
+        "Images/Image_3.jpg"
+        ];
+        
+        let currentIndex = 0; // Track the current image index
+
+        button.addEventListener("click", () => {
+            // Change to the next image in the array
+            currentIndex = (currentIndex + 1) % bgImages.length; // Cycle through images
+            document.body.style.backgroundImage = `url('${bgImages[currentIndex]}')`;
+        });
+    </script>
+</body>
+</html>

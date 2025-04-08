@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE notes [
+    <!ELEMENT notes (#PCDATA|to|from|message|body)*>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT message (#PCDATA)>
+    <!ELEMENT body (#PCDATA)>
+    <!ATTLIST notes id CDATA #REQUIRED>
+]>
+
+<notes id="101">
+    <to>Hey!</to>
+</notes>

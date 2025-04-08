@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("*").css("border", "1px solid gray"); // Adds a border to all elements
+            $("p.intro").css("color", "blue"); // Blue text for class 'intro'
+            $("p:first").css("background-color", "yellow"); // Highlights the first paragraph
+            $("ul li:first").css("color", "green"); // Green color for the first <li> in the first <ul>
+            $("ul li:first-child").css("font-weight", "bold"); // Bold text for the first <li> in each <ul>
+            $("[href]").css("text-decoration", "underline"); // Underlines all elements with href attribute
+            $("a[target='_blank']").css("color", "red"); // Red color for links that open in new tab
+            $("a[target!='_blank']").css("color", "purple"); // Purple for other links
+            $(":button").css("background-color", "lightblue"); // Light blue for buttons
+            $("tr:even").css("background-color", "#f2f2f2"); // Light gray for even rows
+            $("tr:odd").css("background-color", "#d9edf7"); // Light blue for odd rows
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 50%;
+            margin-top: 20px;
+        }
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p class="intro">This is an introductory paragraph.</p>
+    <p>This is another paragraph.</p>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+    <ul>
+        <li>First item in second list</li>
+        <li>Second item in second list</li>
+    </ul>
+    <a href="https://example.com" target="_blank">Link 1 (New Tab)</a>
+    <a href="https://example.org" target="_self">Link 2 (Same Tab)</a>
+    <button>Click me</button>
+    <input type="button" value="Button Input">
+    <table border="1">
+        <tr><td>Row 1</td></tr>
+        <tr><td>Row 2</td></tr>
+        <tr><td>Row 3</td></tr>
+        <tr><td>Row 4</td></tr>
+    </table>
+</body>
+</html>

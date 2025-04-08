@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.a.com" xmlns="http://www.a.co" elementFormDefault="qualified">
+    <xs:element name="student"><!--Root Element-->
+        <xs:complexType><!--type of XML must be complex type-->
+            <xs:sequence><!--order of children elements-->
+                <xs:element name="name" type="xs:string"/><!--child-->
+                <xs:element name="age" type="xs:int"/><!--child-->
+                <xs:element name="dob" type="xs:date"/><!--child-->
+                <xs:element name="contact" type="xs:long"/><!--child-->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

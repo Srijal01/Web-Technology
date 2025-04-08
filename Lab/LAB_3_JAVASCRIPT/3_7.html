@@ -1,0 +1,47 @@
+<!--Write JQuery for element, id and class selectors to show and hide any html element.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Import jQuery -->
+    <style>
+        .content {
+            display: none; /* Initially hidden */
+            padding: 10px;
+            background-color: lightgray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Selectors Demo</h1>
+
+    <button id="toggleParagraph">Toggle Paragraph</button>
+    <p id="paragraph">This is a paragraph with ID.</p>
+
+    <button id="toggleDiv">Toggle Div</button>
+    <div class="content">This is a div with a class.</div>
+
+    <button id="toggleHeader">Toggle Header</button>
+    <h2>This is an element selector example.</h2>
+
+    <script>
+        // jQuery for ID selector
+        $('#toggleParagraph').click(function () {
+            $('#paragraph').toggle(); // Show/Hide the paragraph with ID
+        });
+
+        // jQuery for class selector
+        $('#toggleDiv').click(function () {
+            $('.content').toggle(); // Show/Hide the div with class
+        });
+
+        // jQuery for element selector
+        $('#toggleHeader').click(function () {
+            $('h2').toggle(); // Show/Hide the header element
+        });
+    </script>
+</body>
+</html>
